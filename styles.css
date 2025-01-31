@@ -1,0 +1,352 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    background-image: url('https://i.pinimg.com/474x/6f/ac/a3/6faca365b2d803af969e952526d1bd20.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+a {
+    color: #ffdc73;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background-color: #ff0000; /* Vibrant red */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.burger-3d {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 30px;
+    perspective: 1000px;
+}
+
+.burger-3d div {
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    left: 0;
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear;
+}
+
+.bun.top, .bun.bottom {
+    background: radial-gradient(circle, #f5e6ca, #e0c08c);
+    border-radius: 50%;
+}
+
+.bun.top {
+    top: 0;
+}
+
+.bun.bottom {
+    top: 140px;
+}
+
+.lettuce {
+    top: 40px;
+    background-color: #7ec850;
+}
+
+.patty {
+    top: 70px;
+    background-color: #5a3e36;
+}
+
+.cheese {
+    top: 100px;
+    background-color: #ffdc73;
+}
+
+@keyframes rotate {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.order-now {
+    background-image: linear-gradient(45deg, #ff0000, #e60000);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+}
+
+.order-now.small {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
+.order-now:hover {
+    background-image: linear-gradient(45deg, #ff3333, #cc0000);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.6);
+}
+
+/* Deals Section */
+.deals {
+    background-color: #000;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.deals h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ff0000;
+}
+
+.deal-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.deal-card {
+    background-color: #111;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.deal-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+}
+
+.deal-card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.deal-card img:hover {
+    transform: scale(1.1);
+}
+
+.deal-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px 0;
+}
+
+.deal-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffdc73;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #777;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.deal-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Rate List Section */
+.rate-list {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #111;
+}
+
+.rate-list h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ff0000;
+}
+
+.rate-list table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.rate-list th, .rate-list td {
+    padding: 15px;
+    border: 1px solid #ff0000;
+    color: #fff;
+}
+
+.rate-list th {
+    background-color: #222;
+    font-size: 1.2rem;
+}
+
+.rate-list tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+.rate-list tr:hover {
+    background-color: #2a2a2a;
+}
+
+.rate-list td button {
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* About Section */
+.about {
+    background-color: #111;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff0000;
+}
+
+.about p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Menu Gallery */
+.menu {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff0000;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    margin: 10px;
+    width: 300px;
+    border: 5px solid #ff0000;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Order Section */
+.order {
+    background-color: #000;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.order h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff0000;
+}
+
+.order p {
+    font-size: 1.2rem;
+}
+
+.order a {
+    color: #ffdc73;
+}
+
+.order a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #ff0000;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .burger-3d {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .about h2, .menu h2, .deals h2, .rate-list h2, .order h2 {
+        font-size: 1.8rem;
+    }
+
+    .gallery img, .deal-card, .rate-list table {
+        width: 80%;
+    }
+
+    .deal-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
